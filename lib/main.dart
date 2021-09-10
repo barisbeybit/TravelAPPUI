@@ -25,10 +25,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class TravelAppUI extends StatelessWidget {
+class TravelAppUI extends StatefulWidget {
   const TravelAppUI({Key? key}) : super(key: key);
 
+  @override
+  _TravelAppUIState createState() => _TravelAppUIState();
+}
+
+class _TravelAppUIState extends State<TravelAppUI> {
   get controller => null;
+
+  var choosePlace;
+  List listItems = ["Top Places", "Favorite Places", "Near you"];
 
   @override
   Widget build(BuildContext context) {
@@ -186,6 +194,41 @@ class TravelAppUI extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        DropdownButton(
+                          hint: Text("Top Places"),
+                          items: listItems.map((valueItem) {
+                            return DropdownMenuItem(
+                              value: valueItem,
+                              child: Text(valueItem),
+                            );
+                          }).toList(),
+                          value: choosePlace,
+                          onChanged: (newValue) {
+                            setState(() {
+                              choosePlace = newValue;
+                            });
+                          },
+                        ),
+                        DropdownButton(
+                          hint: Text("Explore"),
+                          items: listItems.map((valueItem) {
+                            return DropdownMenuItem(
+                              value: valueItem,
+                              child: Text(valueItem),
+                            );
+                          }).toList(),
+                          value: choosePlace,
+                          onChanged: (newValue) {
+                            setState(() {
+                              choosePlace = newValue;
+                            });
+                          },
+                        ),
+                      ],
                     ),
                   ],
                 ),
