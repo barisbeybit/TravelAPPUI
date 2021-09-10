@@ -66,10 +66,13 @@ class _TravelAppUIState extends State<TravelAppUI> {
                         )
                       ],
                     ),
-                    Text(
-                      "Where do \nyou want to go? ",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Text(
+                        "Where do \nyou want to go? ",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w600),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -105,12 +108,16 @@ class _TravelAppUIState extends State<TravelAppUI> {
                         )
                       ],
                     ),
-                    Text(
-                      "Categories ",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "Categories ",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
                     ),
                     SingleChildScrollView(
+                      padding: EdgeInsets.only(left: 8, right: 8),
                       scrollDirection: Axis.horizontal,
                       controller: controller,
                       child: Row(
@@ -126,6 +133,9 @@ class _TravelAppUIState extends State<TravelAppUI> {
                             height: 20,
                             width: 80,
                           ),
+                          SizedBox(
+                            width: 4,
+                          ),
                           Container(
                             child: Text(
                               "Hotels",
@@ -136,6 +146,9 @@ class _TravelAppUIState extends State<TravelAppUI> {
                                 color: Colors.blueGrey),
                             height: 20,
                             width: 80,
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                           Container(
                             child: Text(
@@ -148,6 +161,9 @@ class _TravelAppUIState extends State<TravelAppUI> {
                             height: 20,
                             width: 80,
                           ),
+                          SizedBox(
+                            width: 4,
+                          ),
                           Container(
                             child: Text(
                               "Airport",
@@ -158,6 +174,9 @@ class _TravelAppUIState extends State<TravelAppUI> {
                                 color: Colors.blueGrey),
                             height: 20,
                             width: 80,
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                           Container(
                             child: Text(
@@ -170,11 +189,14 @@ class _TravelAppUIState extends State<TravelAppUI> {
                             height: 20,
                             width: 80,
                           ),
+                          SizedBox(
+                            width: 4,
+                          ),
                         ],
                       ),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         DropdownButton(
                           hint: Text("Top Places"),
@@ -218,7 +240,8 @@ class _TravelAppUIState extends State<TravelAppUI> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                              image: AssetImage("images/lotape.png"),
+                              image: AssetImage("assets/images/lotape.png"),
+                              fit: BoxFit.fill,
                             ),
                             boxShadow: [
                               BoxShadow(
@@ -229,7 +252,9 @@ class _TravelAppUIState extends State<TravelAppUI> {
                           ),
                           child: Column(
                             children: [
-                              Icon(Icons.star_border_rounded),
+                              Positioned(
+                                child: Icon(Icons.star_border_rounded),
+                              ),
                             ],
                           ),
                         ),
@@ -240,7 +265,8 @@ class _TravelAppUIState extends State<TravelAppUI> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
-                              image: AssetImage("images/syedra.jpeg"),
+                              image: AssetImage("assets/images/syedra.jpeg"),
+                              fit: BoxFit.fill,
                             ),
                             boxShadow: [
                               BoxShadow(
