@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class TravelAppUI extends StatefulWidget {
@@ -251,9 +252,32 @@ class _TravelAppUIState extends State<TravelAppUI> {
                             ],
                           ),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Positioned(
-                                child: Icon(Icons.star_border_rounded),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white70),
+                                child: Icon(
+                                  Icons.star_border_rounded,
+                                  color: Colors.amber,
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(left: 10, right: 10),
+                                child: Text(
+                                  "Lotape ",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black),
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white12,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
                             ],
                           ),
@@ -276,8 +300,33 @@ class _TravelAppUIState extends State<TravelAppUI> {
                             ],
                           ),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.star_border_rounded),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white70),
+                                child: Icon(
+                                  Icons.star_border_rounded,
+                                  color: Colors.amber,
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(left: 10, right: 10),
+                                child: Text(
+                                  "Syedra ",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black),
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white12,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -287,13 +336,33 @@ class _TravelAppUIState extends State<TravelAppUI> {
                 ),
               ),
             ),
-            Card(
-              margin: EdgeInsets.only(right: 20, left: 20, top: 10),
-              color: Colors.black,
-              shadowColor: Colors.black45,
-              elevation: 30,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.11,
+            Container(
+              margin: EdgeInsets.only(left: 24, right: 24, top: 12),
+              decoration: BoxDecoration(
+                color: Colors.black54,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              height: MediaQuery.of(context).size.height * 0.11,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    Icons.blur_circular_rounded,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    Icons.favorite_border,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
+                ],
               ),
             ),
           ],
